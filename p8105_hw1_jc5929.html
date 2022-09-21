@@ -369,7 +369,23 @@ pre code {
 
 
 <pre class="r"><code>data(&quot;penguins&quot;, package = &quot;palmerpenguins&quot;)
-knitr::opts_chunk$set(echo = TRUE)</code></pre>
+knitr::opts_chunk$set(echo = TRUE)
+head(penguins)</code></pre>
+<pre><code>## # A tibble: 6 × 8
+##   species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;       &lt;int&gt;   &lt;int&gt; &lt;fct&gt; &lt;int&gt;
+## 1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007
+## 2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007
+## 3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007
+## 4 Adelie  Torgersen           NA            NA            NA      NA &lt;NA&gt;   2007
+## 5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007
+## 6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007
+## # … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g</code></pre>
+<pre class="r"><code>nrow(penguins)</code></pre>
+<pre><code>## [1] 344</code></pre>
+<p>The variables in this dataset includes species, island,
+bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex,
+year</p>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>
 <p>This is an R Markdown document. Markdown is a simple formatting

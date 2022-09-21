@@ -7,7 +7,11 @@ date: "2022-09-21"
 ```{r}
 data("penguins", package = "palmerpenguins")
 knitr::opts_chunk$set(echo = TRUE)
+head(penguins)
+nrow(penguins)
 ```
+The variables in this dataset includes `r names(penguins)`
+
 
 ## R Markdown
 
