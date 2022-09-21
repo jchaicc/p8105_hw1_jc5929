@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 head(penguins)
 nrow(penguins)
 ```
-The variables in this dataset includes `r names(penguins)`.The dataset contains data for `r nrow(penguins)`penguins.
+The variables in this dataset includes `r names(penguins)`. The dataset contains data for `r nrow(penguins)` penguins. The mean for the flipper length is `r mean(penguins$flipper_length_mm,na.rm=TRUE)`.
 
 
 ## R Markdown
