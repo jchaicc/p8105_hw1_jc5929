@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 head(penguins)
 nrow(penguins)
 ```
-The variables in this dataset includes `r names(penguins)`
+The variables in this dataset includes `r names(penguins)`.The dataset contains data for `r nrow(penguins)`penguins.
 
 
 ## R Markdown
