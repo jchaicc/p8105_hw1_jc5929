@@ -17,7 +17,27 @@ The variables in this dataset includes `r names(penguins)`. The dataset contains
 ggplot(data=penguins,aes(x=bill_length_mm,y=flipper_length_mm))+geom_point(aes(color=species))
 ```
 
+```{r Q2}
+df=tibble(
+  norm_samp=rnorm(10),
+  norm_samp_log=norm_samp>0,
+  x=as.character(norm_samp),
+  y=factor(x,3)
+)
 
+```
+
+The mean of the norm_sample is `r mean(pull(df, norm_samp))`.
+The mean of the norm_sample_log is `r mean(pull(df,norm_samp_log))`.
+The mean of the characters is `r mean(pull(df,x))`.
+The mean of the factors is `r mean(pull(df,y))`.
+
+```{r convert}
+x_convert=as.numeric(df$x)
+y_convert=as.numeric(df$y)
+```
+The mean for the new x variables is `r mean(x_convert)`.
+The mean for the new y variables is `r mean(y_convert)`. This suggests that character and factor vectors cannot compute the mean, it could only be computed when it is converted to numeric values.
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
@@ -35,5 +55,7 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
+```{r}
 
+```
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
