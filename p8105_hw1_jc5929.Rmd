@@ -5,12 +5,17 @@ date: "2022-09-21"
 ---
 
 ```{r}
+library(tidyverse)
 data("penguins", package = "palmerpenguins")
 knitr::opts_chunk$set(echo = TRUE)
 head(penguins)
 nrow(penguins)
 ```
 The variables in this dataset includes `r names(penguins)`. The dataset contains data for `r nrow(penguins)` penguins. The mean for the flipper length is `r mean(penguins$flipper_length_mm,na.rm=TRUE)`.
+
+```{r scatterplot}
+ggplot(data=penguins,aes(x=bill_length_mm,y=flipper_length_mm))+geom_point(aes(color=species))
+```
 
 
 ## R Markdown
