@@ -8,12 +8,10 @@ date: "2022-09-21"
 library(tidyverse)
 data("penguins", package = "palmerpenguins")
 knitr::opts_chunk$set(echo = TRUE)
-head(penguins)
-nrow(penguins)
 ```
 The variables in this dataset includes `r names(penguins)`. The dataset contains data for `r nrow(penguins)` penguins. The mean for the flipper length is `r mean(penguins$flipper_length_mm,na.rm=TRUE)`.
 
-```{r scatterplot}
+```{r scatterplot,warning=FALSE}
 ggplot(data=penguins,aes(x=bill_length_mm,y=flipper_length_mm))+geom_point(aes(color=species))
 ```
 
@@ -22,7 +20,7 @@ df=tibble(
   norm_samp=rnorm(10),
   norm_samp_log=norm_samp>0,
   x=as.character(norm_samp),
-  y=factor(x,3)
+  y=factor(c("apple","apple","apple","orange","orange","orange","pear","pear","pear","pear"),c(levels="apple","orange","pear"))
 )
 
 ```
