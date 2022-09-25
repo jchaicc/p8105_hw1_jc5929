@@ -13,6 +13,7 @@ The variables in this dataset includes `r names(penguins)`. The dataset contains
 
 ```{r scatterplot,warning=FALSE}
 ggplot(data=penguins,aes(x=bill_length_mm,y=flipper_length_mm))+geom_point(aes(color=species))
+ggsave("scatter_plot.pdf",height=6,width=8)
 ```
 
 ```{r Q2}
